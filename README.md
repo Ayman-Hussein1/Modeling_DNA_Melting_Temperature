@@ -1,7 +1,7 @@
 # DNA Melting Temperature Prediction under Mixed Salt Conditions
 Thanks ChatGPT for the headstart - For detailed description, please read the Summary.pdf in the Results folder.
 
-## Brief Description and Motivation
+# Brief Description and Motivation
 
 Accurate prediction of DNA melting temperature (Tm) is critical for applications such as PCR, where optimal annealing occurs within ~1–2 °C of Tm. However, predicting Tm for short DNA (<100 bp) in buffers containing both **monovalent (Na⁺)** and **divalent (Mg²⁺)** ions remains challenging due to complex, nonlinear salt dependencies.
 
@@ -159,12 +159,13 @@ Models evaluated on:
 * Developed a **single interpretable model** for mixed salt conditions
 * Achieved **competitive MAE (~1–2 °C)**
 * Identified **minimal feature set consistent with biophysics**
+* Used limited number of data points!
 
 ## Future Work
 
 1. **Expand dataset carefully**
 
-   * Focus on length diversity rather than redundant conditions
+   * Focus on length and GC-content diversity rather than redundant conditions
 2. **Revisit modern (dinucleotide) features**
 
    * Requires larger dataset to avoid overfitting
@@ -173,7 +174,7 @@ Models evaluated on:
    * Study GAM smooth functions and feature contributions
 4. **Alternative ensembling approaches**
 
-   * (e.g., voting models, though less interpreable)
+   * (e.g., voting models, though less interpretable)
 
 ---
 
@@ -183,5 +184,3 @@ Models evaluated on:
 * Owczarzy et al. (2004, 2008) – Salt-dependent Tm models
 * Huguet et al. (2010, 2017) – Single-molecule thermodynamics
 * Vologodskii (2018) – DNA melting review
-
-If you want next step: I can generate a **polished repo (folder structure + starter code + badges + requirements.txt)** so you can push this directly to GitHub without extra edits.
