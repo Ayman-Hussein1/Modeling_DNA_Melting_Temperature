@@ -45,9 +45,7 @@ We aim to:
 1. **Achieve high prediction accuracy (low MAE)** for mixed salt conditions using a small dataset
 2. **Develop a single, global, interpretable model** that captures key biophysical dependencies
 
-This project prioritizes the trade-off:
-
-> **Accuracy ↔ Generality ↔ Interpretability**
+This project prioritizes the trade-off: **Accuracy ↔ Generality ↔ Interpretability**
 
 ---
 
@@ -85,11 +83,14 @@ We evaluate three feature sets:
 
 * Fraction of A, T, C, G
 * Duplex Length
+* Salt concentrations (mono/divalent)
 
 ## 3. Modern Features
 
 * Dinucleotide frequencies (e.g., AA/TT, GC/CG, etc.)
 * Duplex Length
+* Salt concentrations (mono/divalent)
+
 
 ## Additional Considerations
 
@@ -100,8 +101,7 @@ We evaluate three feature sets:
 
 ## Key Result
 
-* **Best performance:**
-  → *Typical features + salt interactions*
+* **Best performance:** *Typical features + salt interactions*
 
 ---
 
@@ -125,10 +125,8 @@ We evaluate generalization using three CV strategies:
 
 * Decision Trees → **overfitting**
 * Modern features → too high dimensional for dataset size
-* GAM > LR (captures nonlinear salt effects)
-* Best model:
-
-  > **GAM + Typical Features (+ salt interactions)**
+* GAM is better than LR (captures nonlinear salt effects)
+* Best model: **GAM + Typical Features (+ salt interactions)**
 
 ---
 
